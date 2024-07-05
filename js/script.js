@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // // //Block password
+    // initializeCalendar();
+    // document.getElementById('passwordProtection').style.display = 'none';
+    // document.getElementById('calendar').style.display = 'block';
+    // // //Block password end
+
     const passwordInput = document.getElementById('passwordInput');
     const submitButton = document.getElementById('submitPassword');
     const calendar = document.getElementById('calendar');
@@ -23,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             headerToolbar: {
-                left: 'prev,next',
+                left: 'prev',
                 center: 'title',
-                right: 'today'
+                right: 'today,next'
             },
             events: [
                 {
