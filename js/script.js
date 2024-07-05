@@ -29,23 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            timeZone: 'UTC',
             displayEventTime: false,
+            firstDay: 3,
             headerToolbar: {
                 left: 'prev',
                 center: 'title',
                 right: 'today,next'
             },
-            //Automatically add 1 second to the end date so the event visual occurs on the end date
             events: eventData.map(event => ({
                 ...event,
-                end: event.end.includes('T') ? event.end : event.end + 'T00:00:01'
+                end: extendEndDateByOneDay(event.end),
+            //display: 'background',
+            //className: 'custom-background-event'
             })),
             eventClick: function(info) {
                 alert('Location: ' + info.event.title);
             }
         });
         calendar.render();
+    }
+
+    //Automatically extend the event end date by one day
+    function extendEndDateByOneDay(endDate) {
+        const date = new Date(endDate);
+        date.setDate(date.getDate() + 1);
+        return date.toISOString().split('T')[0]; // Return only the date part
     }
 
     // Optional: Add enter key support for password input

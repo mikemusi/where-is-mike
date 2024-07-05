@@ -99,6 +99,10 @@ footer {
     margin-top: auto;
 }
 
+.fc-bg-event .fc-event-title {
+    color: black !important;
+}
+
 @media screen and (min-width: 768px) {
     .calendar-container {
         padding: 40px;
