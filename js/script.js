@@ -32,15 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
             displayEventTime: false,
             firstDay: 3,
             headerToolbar: {
-                left: 'prev',
-                center: 'title',
-                right: 'today,next'
+                right: 'prev,today,next'
             },
             events: eventData.map(event => ({
                 ...event,
                 end: extendEndDateByOneDay(event.end),
-            //display: 'background',
-            //className: 'custom-background-event'
             })),
             eventClick: function(info) {
                 alert('Location: ' + info.event.title);
