@@ -9,7 +9,6 @@ const eventData = [
         title: 'Vancouver',
         start: '2024-07-05',
         end: '2024-07-14',
-        allDay: true
     },
     {
         title: 'Boston',
