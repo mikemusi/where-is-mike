@@ -29,12 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
+            timeZone: 'UTC',
+            displayEventTime: false,
             headerToolbar: {
                 left: 'prev',
                 center: 'title',
                 right: 'today,next'
             },
-            events: eventData,
+            //Automatically add 1 second to the end date so the event visual occurs on the end date
+            events: eventData.map(event => ({
+                ...event,
+                end: event.end.includes('T') ? event.end : event.end + 'T00:00:01'
+            })),
             eventClick: function(info) {
                 alert('Location: ' + info.event.title);
             }
