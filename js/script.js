@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // // //Block password
-    // initializeCalendar();
-    // document.getElementById('passwordProtection').style.display = 'none';
-    // document.getElementById('calendar').style.display = 'block';
-    // // //Block password end
+    // //Block password - Uncomment to restore password page
+    initializeCalendar();
+    document.getElementById('passwordProtection').style.display = 'none';
+    document.getElementById('calendar').style.display = 'block';
+    // //End
 
     const passwordInput = document.getElementById('passwordInput');
     const submitButton = document.getElementById('submitPassword');
@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
             })),
             eventClick: function(info) {
                 alert('Location: ' + info.event.title);
+            },
+            dayCellDidMount: function(arg) {
+                // Check if this cell represents today
+                if (arg.date.toDateString() === new Date().toDateString()) {
+                    arg.el.classList.add('fc-day-today');
+                }
             }
         });
         calendar.render();
