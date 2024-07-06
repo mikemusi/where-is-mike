@@ -9,11 +9,18 @@ const eventData = [
         textColor: '#000000'
     },
     {
-        title: 'Vancouver',
+        title: 'Washington',
         start: '2024-07-05',
-        end: '2024-07-14',
+        end: '2024-07-06',
         display: 'background',
         color: '#2f9945'
+    },
+    {
+        title: 'Vancouver',
+        start: '2024-07-07',
+        end: '2024-07-14',
+        display: 'background',
+        color: '##205c11'
     },
     {
         title: 'Boston',
