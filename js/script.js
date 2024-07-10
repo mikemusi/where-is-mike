@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             displayEventTime: false,
-            firstDay: 3,
+            firstDay: 1,
             headerToolbar: {
                 right: 'prev,today,next'
             },
