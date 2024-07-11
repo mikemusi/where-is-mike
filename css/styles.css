@@ -128,7 +128,7 @@ footer {
     left: 5px;
     width: 7px;
     height: 7px;
-    background-color: red;
+    background-color: rgb(68, 0, 255);
     border-radius: 50%;
     animation: pulse 1.5s infinite;
 }

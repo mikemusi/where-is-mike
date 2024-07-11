@@ -39,6 +39,20 @@ const eventData = [
     {
         title: 'Boston',
         start: '2024-08-10',
+        end: '2024-08-11',
+        display: 'background',
+        color: '#2b7fe0'
+    },    
+    {
+        title: 'Zurich',
+        start: '2024-08-12',
+        end: '2024-09-01',
+        display: 'background',
+        color: '#bf042c'
+    },
+    {
+        title: 'Boston',
+        start: '2024-09-02',
         end: '2024-09-04',
         display: 'background',
         color: '#2b7fe0'
@@ -48,7 +62,7 @@ const eventData = [
         start: '2024-09-05',
         end: '2024-09-08',
         display: 'background',
-        color: '#f72a38'
+        color: '#bf04a0'
     },
     {
         title: 'Boston',
@@ -58,7 +72,7 @@ const eventData = [
         color: '#2b7fe0'
     },
     {
-        title: 'Boston/Zurich',
+        title: '???',
         start: '2024-09-14',
         end: '2024-11-03',
         display: 'background',
