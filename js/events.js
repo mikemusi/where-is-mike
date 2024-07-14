@@ -25,6 +25,20 @@ const eventData = [
     {
         title: 'Boston',
         start: '2024-07-15',
+        end: '2024-07-19',
+        display: 'background',
+        color: '#2b7fe0'
+    },
+    {
+        title: 'NYC',
+        start: '2024-07-20',
+        end: '2024-07-21',
+        display: 'background',
+        color: 'yellow'
+    },
+    {
+        title: 'Boston',
+        start: '2024-07-22',
         end: '2024-08-01',
         display: 'background',
         color: '#2b7fe0'
