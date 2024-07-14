@@ -81,16 +81,23 @@ const eventData = [
     {
         title: 'Boston',
         start: '2024-09-09',
-        end: '2024-09-13',
+        end: '2024-09-12',
         display: 'background',
         color: '#2b7fe0'
     },
     {
-        title: '???',
-        start: '2024-09-14',
+        title: 'Rome, GA',
+        start: '2024-09-13',
+        end: '2024-09-15',
+        display: 'background',
+        color: 'orange'
+    },
+    {
+        title: 'Boston',
+        start: '2024-09-16',
         end: '2024-11-03',
         display: 'background',
-        color: '#ffffff'
+        color: '#2b7fe0'
     },
     {
         title: 'Honduras',
