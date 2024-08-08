@@ -62,7 +62,7 @@ const eventData = [
         start: '2024-08-11',
         end: '2024-08-11',
         display: 'background',
-        color: '#beige'
+        color: '#blue'
     },
     {
         title: 'Zurich',
