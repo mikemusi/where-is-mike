@@ -53,10 +53,17 @@ const eventData = [
     {
         title: 'Boston',
         start: '2024-08-10',
-        end: '2024-08-11',
+        end: '2024-08-10',
         display: 'background',
         color: '#2b7fe0'
     },    
+    {
+        title: 'Maine',
+        start: '2024-08-11',
+        end: '2024-08-11',
+        display: 'background',
+        color: '#beige'
+    },
     {
         title: 'Zurich',
         start: '2024-08-12',
