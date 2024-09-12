@@ -1,8 +1,9 @@
+/* Reset and base styles */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,78 +12,21 @@ body {
     flex-direction: column;
     background-color: #f5f5f5;
     color: #333;
+    min-height: 100vh;
 }
 
-header, footer {
-    width: 100%;
-    padding: 10px 0;
-    background-color: #3788d8;
-    color: white;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    overflow: auto;
-}
-
-.calendar-container {
-    width: 100%;
-    max-width: 740px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#calendar {
-    width: 100%;
-    max-width: 740px;
-    height: auto;
-    max-height: 550px;
-    font-size: 14px;
-}
-
-footer {
-    background-color: #f0f0f0;
-    color: #666;
-    font-size: 0.9em;
-    margin-top: auto;
-}
-
-.fc-bg-event .fc-event-title {
-    color: black !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-}
-
-/* Add these new styles to your existing styles.css file */
-
+/* Layout and container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Header styles */
 header {
     background-color: #3788d8;
     padding: 15px 0;
+    width: 100%;
 }
 
 header .container {
@@ -93,10 +37,11 @@ header .container {
 
 h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2.5em;
     color: white;
 }
 
+/* Navigation styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -122,50 +67,55 @@ nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Main content area */
 main {
+    flex: 1 0 auto;
     padding: 40px 0;
+    overflow-y: auto;
+    width: 100%;
 }
 
+/* Footer styles */
 footer {
     background-color: #f0f0f0;
     color: #666;
     padding: 20px 0;
     text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    font-size: 0.9em;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 15px;
-        align-self: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+/* Calendar styles */
+.calendar-container {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Keep your existing styles for the calendar and other elements */
+#calendar {
+    width: 100%;
+    max-width: 740px;
+    height: auto;
+    max-height: 550px;
+    font-size: 14px;
+}
 
-/* Remove default background highlight and optionally add colored border */
+/* FullCalendar overrides */
+.fc-bg-event .fc-event-title {
+    color: black !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
 .fc .fc-day-today {
     background-color: inherit !important;
-    /* border-width: 1px;
-    box-shadow: inset 0 0 0 1px #000000 !important; */
-}
-
-/* Red dot recording */
-.fc .fc-day-today {
     position: relative;
 }
 
@@ -197,21 +147,30 @@ footer {
         box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
     }
 }
-/* End */
 
-@media screen and (min-width: 768px) {
-    .calendar-container {
-        padding: 40px;
-    }
-    
-    #calendar {
-        font-size: 16px;
-    }
-}
-
+/* Responsive design */
 @media screen and (max-width: 767px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 15px;
+        align-self: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
     main {
-        padding: 10px;
+        padding: 20px 0;
     }
 
     .calendar-container {
@@ -220,5 +179,15 @@ footer {
 
     #calendar {
         font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .calendar-container {
+        padding: 40px;
+    }
+    
+    #calendar {
+        font-size: 16px;
     }
 }
